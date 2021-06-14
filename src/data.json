@@ -1,0 +1,202 @@
+{
+  "id": "sheet-1",
+  "name": "Talia King",
+  "sections": [
+    {
+      "id": "section-1",
+      "title": "Character",
+      "elements": [
+        {
+          "id": "element-1",
+          "elementType": "field",
+          "title": "Class",
+          "description": "",
+          "inputs": [
+            {
+              "id": "input-1",
+              "inputType": "field",
+              "defaultValue": "",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-2",
+          "elementType": "field",
+          "title": "Alignment",
+          "description": "",
+          "inputs": [
+            {
+              "id": "input-2",
+              "inputType": "field",
+              "defaultValue": "",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-3",
+          "elementType": "field",
+          "title": "Level",
+          "description": "",
+          "inputs": [
+            {
+              "id": "input-3",
+              "inputType": "field",
+              "defaultValue": "",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-4",
+          "elementType": "field",
+          "title": "Experience",
+          "description": "",
+          "inputs": [
+            {
+              "id": "input-4",
+              "inputType": "field",
+              "defaultValue": "",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-5",
+          "elementType": "field-buff",
+          "title": "Weapon 1",
+          "description": "Multiply by 2 when fighting with an ally.",
+          "inputs": [
+            {
+              "id": "input-5",
+              "inputType": "field",
+              "defaultValue": "Sword",
+              "value": null
+            },
+            {
+              "id": "input-6",
+              "inputType": "buff",
+              "defaultValue": 5,
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-6",
+          "elementType": "field-buff",
+          "title": "Weapon 2",
+          "description": "",
+          "inputs": [
+            {
+              "id": "input-7",
+              "inputType": "field",
+              "defaultValue": "Bow",
+              "value": null
+            },
+            {
+              "id": "input-8",
+              "inputType": "buff",
+              "defaultValue": 2,
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-7",
+          "elementType": "field-buff",
+          "title": "Weapon 3",
+          "description": "",
+          "inputs": [
+            {
+              "id": "input-9",
+              "inputType": "field",
+              "defaultValue": "",
+              "value": null
+            },
+            {
+              "id": "input-10",
+              "inputType": "buff",
+              "defaultValue": 0,
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-8",
+          "elementType": "dice-pool",
+          "title": "Initiative",
+          "description": "",
+          "inputs": [
+            {
+              "id": "input-11",
+              "inputType": "dice-count",
+              "defaultValue": 1,
+              "value": null
+            },
+            {
+              "id": "input-12",
+              "inputType": "dice-type",
+              "defaultValue": "d20",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-9",
+          "elementType": "dice-pool",
+          "title": "Damage",
+          "description": "",
+          "inputs": [
+            {
+              "id": "input-13",
+              "inputType": "dice-count",
+              "defaultValue": 1,
+              "value": null
+            },
+            {
+              "id": "input-14",
+              "inputType": "dice-type",
+              "defaultValue": "d6",
+              "value": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section-2",
+      "title": "Notes",
+      "elements": [
+        {
+          "id": "element-10",
+          "elementType": "note",
+          "title": "Background",
+          "description": "Your Character's origin story and history.",
+          "inputs": [
+            {
+              "id": "input-15",
+              "inputType": "note",
+              "defaultValue": "",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "element-11",
+          "elementType": "note",
+          "title": "Misc",
+          "description": "Keep your misc notes here!",
+          "inputs": [
+            {
+              "id": "input-16",
+              "inputType": "note",
+              "defaultValue": "",
+              "value": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

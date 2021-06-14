@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Role Sheet Coding Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React frontend coding challenge. You are given a set of data representing a Character Sheet. Your goal is to create components and interactions to display and manipulate the data of the given sheet.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+This repo is a fresh `create-react-app` installation setup with 1 view and an empty implementation of a Sheet Component that you are to flesh out.
 
-### `yarn start`
+You can see the data for the sheet located in `src/data.json`. It represents a sheet with 2 sections and 4 elements.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This challenge is setup to enable you to complete it within 2-4 hours. Regardless of how far you get, you are not required to spend more than 4 hours working on it. This challenge is focused more on architecture rather than design, so prioritize functionality first and how it looks second.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setup
 
-### `yarn test`
+- Install Node v12.14.0. If using NVM: `nvm install v12.14.0`.
+- Install yarn: `npm install --global yarn`
+- Clone this repo to your machine. Feel free to fork it first if you want to [submit your solution](#submitting-your-solution) via GitHub.
+- Run `yarn install`.
+- Run `yarn start` to start the server at [http://localhost:3000](http://localhost:3000).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `yarn build`
+- Flesh out a Sheet Component to display the given data located in `src/data.json`. You may use either Class Components or Functional Components. A starter component is given to you in `src/components/Sheet`. The data is already setup to be passed into your Sheet component via a `sheet` prop. Whichever component type you decide to use, make sure to uncomment its import in `src/App.js` on lines 7 or 8.
+- Your code should handle displaying all parts of a Sheet: Sections, Elements, Inputs. [Click here for a diagram of the attributes of Sheet.](https://drive.google.com/file/d/1Tv2Ep3ARpz334Rf3YPf1tu29J89xgsT2/view?usp=sharing)
+- Your code should be as reusable as possible.
+- If the data were to change to add more Sections, Elements, or Inputs your code should be able to gracefully handle that.
+- Your code should be able to gracefully handle new Element or Input types if they are added in the future.
+- A sheet has two modes: View and Edit. You will need to add a way to toggle between these modes.
+  - By default a sheet loads in View Mode. When in View Mode elements are locked and not able to be changed.
+  - In Edit Mode, all inputs are unlocked and can be updated. Updating an input should update the state of the sheet. **You do NOT need to persist to the data file.**
+  - [See below for how each Element acts in each mode](#sheet-modes).
+- Clicking a `dice-pool` or `field-buff` when in view mode, should alert the person of their action.
+- You may add any additional packages you would like.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Additional Attribute Information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Sheet Attributes
+  - name: a non-nullable non-empty String
+  - sections: an array of 0 or more Section
+- Section Attributes
+  - title: a non-nullable non-empty String
+  - elements: an array of 0 or more Element
+- Element Attributes
+  - elementType: non-nullable Element Type
+  - title: a non-nullable String, can be empty string
+  - description: a non-nullable String, can be empty string
+  - inputs: an array of 0 or more Input
+- Input Attributes
+  - inputType: non-nullable Input Type
+  - defaultValue: non-nullable String or Number
+  - value: nullable String or Number
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sheet Modes
 
-### `yarn eject`
+| Element Type | View Mode | Edit Mode |
+| ------------ | --------- | --------- |
+| `dice-pool` | A singular button. When clicked alerts the person which dice and how many they are rolling. | Two editable inputs, 1 representing the dice count, 1 representing the dice type. |
+| `field` | Locked single line of text. | Editable single line of text. |
+| `field-buff` | A locked single line of text and a button that when clicked alerts the person of the buff they selected. | An editable line of text and an editable line for the buff. |
+| `note` | Locked multiline text. | Editable multiline text. |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Element Types
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Name | Description |
+| ---- | ----------- |
+| `dice-pool` | A two input element. First input is the number of dice. Second input is to select the type of dice. |
+| `field` | A single input element. Input is a single line of text. |
+| `field-buff` | A two input element. First input is a single line of text. Second input is the number of the buff. |
+| `note` | A single input element. Input is multiline text. |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Input Types
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+| Name | Description |
+| ---- | ----------- |
+| `buff` | A number input. Must be an integer. |
+| `dice-count` | A number input. Must be an integer >= 0. |
+| `dice-type` | A select input. Only allows values of: `d6`, `d20`, `d100` |
+| `field` | A text input. Only one line. |
+| `note` | A text input. Allows multiple lines. |
 
-## Learn More
+## Submitting Your Solution
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can submit your solution 1 of 2 ways:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork this repo, commit your changes to your fork, and send a link to your forked repo to ian@playrole.com
+1. Create a zip of your final solution and email it to ian@playrole.com

@@ -1,0 +1,41 @@
+.container {
+  height: 100vh;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url(./images/RoleBackground.jpg) center top no-repeat;
+  background-size: cover;
+}
+
+.header {
+  padding: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #242424;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
+  display: inline-block;
+  background: url(./images/RoleLogoIcon.png) center center no-repeat;
+  background-size: contain;
+}
+
+.heading {
+  font-size: 16px;
+}
+
+.content {
+  max-width: 460px;
+  margin: 0 auto;
+  background: #111;
+}
