@@ -14,7 +14,7 @@ This challenge is setup to enable you to complete it within 2-4 hours. Regardles
 
 - Install Node v12.14.0. If using NVM: `nvm install v12.14.0`.
 - Install yarn: `npm install --global yarn`
-- Clone this repo to your machine. Feel free to fork it first if you want to [submit your solution](#submitting-your-solution) via GitHub.
+- Clone this repo to your machine.
 - Run `yarn install`.
 - Run `yarn start` to start the server at [http://localhost:3000](http://localhost:3000).
 
@@ -80,7 +80,4 @@ This challenge is setup to enable you to complete it within 2-4 hours. Regardles
 
 ## Submitting Your Solution
 
-You can submit your solution 1 of 2 ways:
-
-1. Fork this repo, commit your changes to your fork, and send a link to your forked repo to ian@playrole.com
-1. Create a zip of your final solution and email it to ian@playrole.com
+Create a zip of your final solution and email it to ian@playrole.com.
