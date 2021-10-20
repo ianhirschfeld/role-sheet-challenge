@@ -80,4 +80,4 @@ This challenge is setup to enable you to complete it within 2-4 hours. Regardles
 
 ## Submitting Your Solution
 
-Create a zip of your final solution and email it to ian@playrole.com.
+Create a zip of your final solution, removing any `.git` and `node_modules` directories, and email it to ian@playrole.com.
